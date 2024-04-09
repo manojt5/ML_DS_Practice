@@ -3,7 +3,7 @@ from typing import List
 
 HYPHEN_E_DOT='-e .'
 def get_requirements(file_path:str)->List[str]:
-    '''
+    ''' 
     This func will return the list of requirements
     '''
     requirements=[]
