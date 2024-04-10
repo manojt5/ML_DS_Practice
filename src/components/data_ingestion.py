@@ -3,7 +3,7 @@ import sys
 from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
-
+# import time
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
@@ -35,6 +35,8 @@ class DataIngestion:
             logging.info("Train and test data saved successfully")
 
             logging.info("Ingestion of the data is completed")
+            # time.sleep(5)
+            # logging.info("hello world")
             return (
                 self.ingestion_config.train_data_path,
                 self.ingestion_config.test_data_path
