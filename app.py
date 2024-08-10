@@ -36,7 +36,7 @@ app=application
 
 @app.route('/')
 def index():
-    return render_template('index.html') 
+    return render_template('home.html') 
 
 @app.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
@@ -66,4 +66,7 @@ def predict_datapoint():
  
 
 if __name__ == '__main__':
-    app.run(debug=True,host="0.0.0.0")
+    # app.run(debug=True,host="0.0.0.0")
+    port = 5000
+    print(f'Server running at http:127.0.0.1:{port}')
+    app.run(debug=True,port=port)
